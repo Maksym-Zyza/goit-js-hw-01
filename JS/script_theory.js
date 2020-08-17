@@ -296,24 +296,4 @@
 // 3. в каждом кейсе задать в message строку
 // 4. сделать лог message
 
-const options = 3;
-let message = "";
-
-switch (options) {
-  case 1:
-    message = "Вы можете забрать товар завтра с 9:00";
-    break;
-
-  case 2:
-    message = "Курьер доставит посылку завтра с 9:00 до 18:00";
-    break;
-
-  case 3:
-    message = "Посылка будет отправлена сегодня";
-    break;
-
-  default:
-    message = "Вам передзвонит менеджер";
-}
-
-console.log(message);
+// sda
