@@ -22,50 +22,24 @@
   console.log(quantity); - возвращает введенное значение либо null (значение стррока)
   quantity = Number(quantity); - для преобразования в числовое значение
 
-// -- Парсинг числа:
-Number.parseInt() и Number.parseFloat()
-
-let elementWhids = "50.2533px";
-const resalt = Number.parseFloat(elementWhids);
-console.log(resalt);
-
-- Number.parseInt() - вычисляет число до первого знака.
-- Number.parseFloat() - вычисляет нецелое число - "502.33"
+// -- Парсинг числа Number.parseInt() и Number.parseFloat()
+// Number.parseInt() - вычисляет число до первого знака.
+// Number.parseFloat() - вычисляет нецелое число - "502.33"
 
 // -- Округление числа - число.toFixed(значение)
+// значение выщитывается справа на лево
 
-let salary = 1300.87854;
-salary = salary.toFixed(2);
-console.log(salary);
-salary = Number(salary);
-
-Краткая запись: // значение выщитывается справа на лево
-let salary = 1300.87811;
-console.log(Number(salary.toFixed(2)));
-
-// -- Приведение (приобразование) к числу:
-
-console.log(Number(true)); // 1
-console.log(Number(false)); //0
-console.log(Number(qwqw)); // NaN
+// -- Приведение (приобразование) к числу Number()
 
 5. МАТЕМАТИЧЕСКИЕ ФУНКЦИИ:
    console.log(Math);
 
-// -- Возведение в степень: 2 в 8 степень:
-const base = 2;
-const power = 8;
-console.log(base \*\* power);
-const result = Math.pow(2, 8); //256 - Math.pow() - возведение в степень: 2 в 8 степени.
-console.log(result);
+// -- Возведение в степень: 2 в 8 степень Math.pow(2, 8)
+// console.log(2 \*\* 8); - современный аналог
 
-<!-- console.log(2 ** 8); - современный аналог -->
-
-// -- Корень квадратный Math.sqrt()
-console.log(Math.sqrt(9, 2));
-
+// -- Корень квадратный Math.sqrt(9, 2)
 // -- Скрипт -возведения числа в степень
-// -- Генерим псевдослучайные числа:
+// -- Псевдослучайные числа Math.random(), Math.round()
 // -- Рандомный цвет backgroundColor
 // -- Длина строки - свойсто length
 // -- Конкатенация строе (сшивание)
@@ -73,4 +47,23 @@ console.log(Math.sqrt(9, 2));
 // -- Шаблонные строки
 // -- Поиск в строке с методом includes() и toLowerCase()
 
-// -- ОПЕРАТОРЫ СРАВНЕНИЯ
+6. ОПЕРАТОРЫ
+// ОПЕРАТОРЫ СРАВНЕНИЯ (<, >, = ,)
+// СРАВНЕНИЯ И РАВЕНСТВА (===, !==)
+
+// ЛОГИЧЕСКИЕ ОПЕРАТОРЫ:
+/- Приведение к булю Boolean()
+/- Логическое И (&&)
+/- Логическое ИЛИ (||)
+/- Логическое НЕ (!)
+
+//ЗАДАЧИ
+
+// ОПЕРАТОРЫ ОТВЕТВЛЕНИЯ
+/- if () {}
+/- if () {} else {}
+/- if () {} else if () {} else if () {} else {}
+
+// ТЕРНАРНЫЙ ОПЕРАТОР: const a = условие >= 0 ? выражение1 : выражение2;
+
+7. БЛОЧНАЯ ВИДИМОСТЬ ПЕРЕМЕННЫХ
