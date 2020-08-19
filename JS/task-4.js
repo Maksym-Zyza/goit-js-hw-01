@@ -20,6 +20,8 @@ const remainderCredits = credits - quantityDroid * pricePerDroid;
 
 if (totalPrice > credits) {
   message = `Недостаточно средств на счету!`;
+} else if (isNaN(quantityDroid)) {
+  message = "Было введено не число, попробуйте еще раз";
 } else if (
   quantityDroid === "" ||
   quantityDroid === null ||

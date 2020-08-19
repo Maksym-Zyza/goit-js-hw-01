@@ -8,33 +8,33 @@
 // Индия - 80 кредитов
 // Ямайка - 120 кредитов
 
-// let country = prompt("Укажите страну доставки товара");
-// // country = country.toLowerCase();
-// // console.log(country);
-// let price;
-// // let message = `Доставка в ${country} будет стоить ${price} кредитов`;
+let country = prompt("Укажите страну доставки товара");
+country = country.toLowerCase();
+let price;
 
-// switch (country) {
-//   case "Китай":
-//     price = 100;
-//     console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-//     break;
-//   case "Чили":
-//     price = 250;
-//     console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-//     break;
-//   case "Австралия":
-//     price = 170;
-//     console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-//     break;
-//   case "Индия":
-//     price = 80;
-//     console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-//     break;
-//   case "Ямайка":
-//     price = 120;
-//     console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-//     break;
-//   default:
-//     console.log(`В вашей стране доставка не доступна`);
-// }
+switch (country) {
+  case "китай":
+    price = 100;
+    break;
+  case "чили":
+    price = 250;
+    break;
+  case "австралия":
+    price = 170;
+    break;
+  case "индия":
+    price = 80;
+    break;
+  case "ямайка":
+    price = 120;
+    break;
+  default:
+    alert(`В вашей стране доставка не доступна`);
+}
+
+if (typeof price === "undefined") {
+  console.log(`В вашей стране доставка не доступна`);
+} else {
+  country = country[0].toUpperCase() + country.slice(1);
+  console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+}

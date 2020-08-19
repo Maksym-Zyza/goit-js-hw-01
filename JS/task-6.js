@@ -7,36 +7,19 @@
 
 let input;
 let total = 0;
-input = Number(prompt("Введите чило"));
-console.log(input);
 
-// for (let input = 0; input !== null; input += total) {
-  console.log(`Число - ${input}`);
+for (let input = 0; input !== null; input += 0) {
+  input = prompt("Введите чило");
   if (input === null) {
     console.log(`Выход`);
     break;
+  } else if (isNaN(input)) {
+    alert("Было введено не число, попробуйте еще раз");
+  } else {
+    console.log(`Начальное значение: ${total}`);
+    total += Number(input);
+    console.log(`Введенное число: ${input}`);
+    console.log(`Сумма: ${total}`);
   }
 }
 alert(`Общая сумма чисел равна ${total}`);
-
-// if (input > 0) {
-//   console.log(`Число - ${input}`);
-//   total += input;
-//   console.log(`Cумма равна - ${total}`);
-// } else if (input === "") {
-//   console.log(`Общая сумма чисел равна ${total}`);
-//   alert(`Общая сумма чисел равна ${total}`);
-// } else {
-//   console.log(`ytsdfsdf`);
-// }
-// alert(`Общая сумма чисел равна ${total}`);
-
-// function () {
-//   console.log(`Значение ${total}`);
-//   const value = Number(valueInput.value);
-//   console.log(value);
-//   total += value;
-//   console.log("total: ", total);
-//   outpuutEl.textContent = total;
-//   valueInput.value = "";
-// }
