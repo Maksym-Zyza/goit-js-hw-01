@@ -319,8 +319,122 @@
 // console.log(message);
 
 // 9. ЦИКЛ for (инициалязация; условие; пост - выражение) { тело цикла}
-for (let i = 250; i > 100; i -= 1) {
-  console.log(i);
-}
+// for (let i = 5; i < 100; i += 1) {
+//   console.log(i);
+// }
+
+// for (let i = 150; i > 100; i -= 5) {
+//   console.log(i);
+// }
 // Прекращает работу, когда в условии - false
 //  i= i+1  ES6: i += 1
+
+// ЗАДАЧА 1
+// Перебрать работников в цикле, генерация и сложение их зарплаты
+
+// const minSalory = 500;
+// const maxSalory = 5000;
+// const employers = 5;
+// let totalSalary = 0;
+
+// for (let i = 0; i <= employers; i += 1) {
+//   let salory = Math.round(Math.random() * (maxSalory - minSalory) + minSalory);
+//   console.log(`ЗП работника ${i} - ${salory}`);
+//   totalSalary += salory;
+// }
+// console.log(totalSalary);
+
+// ЗАДАЧА 2
+// Подсчитать сумму всех четных чилел от min до max.
+
+// const min = 6;
+// const max = 10;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 2 !== 0) {
+//     console.log(`не чётное: `, i);
+//     continue;
+//   }
+//   console.log(`чётное: `, i);
+//   total += i;
+// }
+// console.log(total);
+
+// ЗАДАЧА 3
+// Покупка в магазине:
+// Есди сумма не пребышает баланс пользователя, вычисляем из баланса сумму, сообщение - "На счету осталось [число] кредитов"
+// Если сумма превышает баланс - сообщение "На счему недостаточно средств"
+// В конце сообщение - "Операция завершена"
+
+// let balanse = 10000;
+// const payment = 3000;
+
+// if (payment <= balanse) {
+//   balanse -= payment; //balanse = balanse - payment;
+//   console.log(`На счету осталось ${balanse} кредитов`);
+// } else console.log(`На счему недостаточно средств`);
+// console.log("Операция завершена");
+
+// ЗАДАЧА 4
+// Разный % скидки дается о потраченой рание сумми + сумма покупки
+
+// let totalSpent = 5000;
+// let payment = 300;
+// let discount = 0;
+
+// if (100 <= totalSpent && totalSpent < 1000) {
+//   totalSpent += payment;
+//   console.log(`Потрачено ${totalSpent} - Бронзовые партнер, скидка 2 %`);
+//   discount = 0.02;
+// } else if (1000 <= totalSpent && totalSpent < 5000) {
+//   totalSpent += payment;
+//   console.log(`Потрачено ${totalSpent} - Серебряный партнер, скидка 5 %`);
+//   discount = 0.05;
+// } else if ((totalSpent) => 5000) {
+//   totalSpent += payment;
+//   console.log(`Потрачено ${totalSpent} - Золотой партнер, скидка 10 %`);
+//   discount = 0.1;
+// } else {
+//   console.log(`У вас еще нет партнерской скидки`);
+// }
+
+// payment = payment - payment * discount;
+// console.log(
+//   `Оформлен заказ на сумму ${payment} со скидкой ${discount * 100} %`
+// );
+
+// totalSpent += payment;
+// console.log(`Общая сумма потраченая в магазине: ${totalSpent}`);
+
+// ЗАДАЧА 5
+//
+
+const butAdd = document.querySelector("button"); // выбрать елемент с документа по сетектору
+// console.log(butAdd); // вывести елемент в консоль
+// console.dir(butAdd); // посмотреть сфойства
+// console.dir(butAdd.textContent); // посмотреть текст елемента
+// butAdd.textContent = "qwqwqw"; // задать текст елемента
+const butRes = document.querySelector("button[data-reset]");
+// console.log(butRes);
+const valueInput = document.querySelector("input[data-value]");
+// console.log(valueInput);
+const outpuutEl = document.querySelector(".js-outpuut span");
+// console.log(outpuutEl);
+
+let total = 0;
+// добавляем слушателя событий при клике и в него ф-ю
+butAdd.addEventListener("click", function () {
+  console.log(`Значение ${total}`);
+  const value = Number(valueInput.value);
+  console.log(value);
+  total += value;
+  console.log("total: ", total);
+  outpuutEl.textContent = total;
+  valueInput.value = "";
+});
+
+butRes.addEventListener("click", function () {
+  total = 0;
+  outpuutEl.textContent = total;
+});

@@ -76,6 +76,6 @@
 
 10. Задачи
 
-11. Codewars
+11. Codewars - https://www.codewars.com/dashboard
 
 12. DOM
