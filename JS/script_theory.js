@@ -410,31 +410,100 @@
 // ЗАДАЧА 5
 //
 
-const butAdd = document.querySelector("button"); // выбрать елемент с документа по сетектору
-// console.log(butAdd); // вывести елемент в консоль
-// console.dir(butAdd); // посмотреть сфойства
-// console.dir(butAdd.textContent); // посмотреть текст елемента
-// butAdd.textContent = "qwqwqw"; // задать текст елемента
-const butRes = document.querySelector("button[data-reset]");
-// console.log(butRes);
-const valueInput = document.querySelector("input[data-value]");
-// console.log(valueInput);
-const outpuutEl = document.querySelector(".js-outpuut span");
-// console.log(outpuutEl);
+// const butAdd = document.querySelector("button"); // выбрать елемент с документа по сетектору
+// // console.log(butAdd); // вывести елемент в консоль
+// // console.dir(butAdd); // посмотреть сфойства
+// // console.dir(butAdd.textContent); // посмотреть текст елемента
+// // butAdd.textContent = "qwqwqw"; // задать текст елемента
+// const butRes = document.querySelector("button[data-reset]");
+// // console.log(butRes);
+// const valueInput = document.querySelector("input[data-value]");
+// // console.log(valueInput);
+// const outpuutEl = document.querySelector(".js-outpuut span");
+// // console.log(outpuutEl);
 
-let total = 0;
-// добавляем слушателя событий при клике и в него ф-ю
-butAdd.addEventListener("click", function () {
-  console.log(`Значение ${total}`);
-  const value = Number(valueInput.value);
-  console.log(value);
-  total += value;
-  console.log("total: ", total);
-  outpuutEl.textContent = total;
-  valueInput.value = "";
-});
+// let total = 0;
+// // добавляем слушателя событий при клике и в него ф-ю
+// butAdd.addEventListener("click", function () {
+//   console.log(`Значение ${total}`);
+//   const value = Number(valueInput.value);
+//   console.log(value);
+//   total += value;
+//   console.log("total: ", total);
+//   outpuutEl.textContent = total;
+//   valueInput.value = "";
+// });
 
-butRes.addEventListener("click", function () {
-  total = 0;
-  outpuutEl.textContent = total;
-});
+// butRes.addEventListener("click", function () {
+//   total = 0;
+//   outpuutEl.textContent = total;
+// });
+
+// ЗАДАЧА 6 (из тестов)
+
+const countryName = "КитаЙ";
+
+const CANCELED_BY_USER = "Отменено пользователем!";
+const NO_DELIVERY = "В выбранную страну доставка недоступна.";
+const CHINA = "Китай";
+const AUSTRALIA = "Австралия";
+const INDIA = "Индия";
+const JAMAICA = "Ямайка";
+let message;
+let price = 0;
+let country;
+if (countryName === null) {
+  message = CANCELED_BY_USER;
+} else {
+  country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
+  switch (country) {
+    // Write code under this line
+    case "Китай":
+      price = 100;
+      break;
+    case "Австралия":
+      price = 170;
+      break;
+    case "Индия":
+      price = 80;
+      break;
+    case "Ямайка":
+      price = 120;
+      break;
+  }
+}
+if (countryName === null) {
+  message = CANCELED_BY_USER;
+} else if (price === 0) {
+  // Write code on this line
+  message = NO_DELIVERY;
+} else {
+  // Write code on this line
+  message = `Доставка в ${country} будет стоить ${price} кредитов`;
+}
+
+console.log(message);
+
+//если countryName равно "КитаЙ"
+// то значение message будет равно
+// 'Доставка в Китай будет стоить 100 кредитов'
+
+//если countryName равно null
+// то значение message будет равно
+// 'Отменено пользователем!'
+
+//если countryName равно "Чили"
+// то значение message будет равно
+// 'В выбранную страну доставка недоступна.'
+
+//если countryName равно "КитаЙ"
+// то значение message будет равно
+// 'Доставка в Китай будет стоить 100 кредитов'
+
+//если countryName равно null
+// то значение message будет равно
+// 'Отменено пользователем!'
+
+//если countryName равно "Чили"
+// то значение message будет равно
+// 'В выбранную страну доставка недоступна.'
